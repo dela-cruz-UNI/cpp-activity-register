@@ -12,13 +12,9 @@
 
 class Register {
 public:
-    //Register();
-    //~Register();
-
     void addActivity(const Activity &activity);
     string toString();
     void eraseActivity(const Activity &activity);
-
 
 public:
     vector<Activity> activityRegister;

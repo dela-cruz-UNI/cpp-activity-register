@@ -7,7 +7,6 @@
 class Time {
 public:
     Time(int day, int month, int year, int hour, int minute):day(day), month(month), year(year), hour(hour), minute(minute){};
-    ~Time(){};
 
     bool operator==(const Time& right) const;
     bool operator!=(const Time& right) const;

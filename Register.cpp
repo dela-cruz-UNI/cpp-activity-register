@@ -1,7 +1,7 @@
 
 #include "Register.h"
 #include "Activity.h"
-#include <vector>
+#include "Time.h"
 #include <iostream>
 #include <sstream>
 
@@ -25,7 +25,6 @@ string Register::toString() {
           << "Start event: " << a.getStart().toString() << endl
           << "End Event: " << a.getEnd().toString() << endl << endl;
     }
-
     return s.str();
 }
 
