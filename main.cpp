@@ -1,6 +1,7 @@
 #include <iostream>
+#include "Activity.h"
+#include "Register.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
 }
