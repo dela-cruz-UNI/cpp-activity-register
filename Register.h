@@ -16,7 +16,7 @@ public:
     //~Register();
 
     void addActivity(const Activity &activity);
-    string toStringActivityRegister();
+    string toString();
     void eraseActivity(const Activity &activity);
 
 

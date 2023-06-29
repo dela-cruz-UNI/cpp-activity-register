@@ -18,7 +18,7 @@ void Register::eraseActivity(const Activity &activity) {
     }
 }
 
-string Register::toStringActivityRegister() {
+string Register::toString() {
     std::stringstream s;
     for (Activity a : activityRegister) {
         s << a.getDescription() << endl
