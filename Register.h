@@ -13,6 +13,7 @@
 class Register {
 public:
     void addActivity(const Activity &activity);
+    void addActivity(const string &description, const Time &start, const Time &end);
     string toString();
     void eraseActivity(const Activity &activity);
 

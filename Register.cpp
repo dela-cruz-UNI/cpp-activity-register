@@ -10,6 +10,8 @@ void Register::addActivity(const Activity &activity) {
     activityRegister.push_back(activity);
 }
 
+//void Register::
+
 void Register::eraseActivity(const Activity &activity) {
     for (int i = 0; i < activityRegister.size(); i++) {
         if (activityRegister[i] == activity) {
@@ -22,8 +24,8 @@ string Register::toString() {
     std::stringstream s;
     for (Activity a : activityRegister) {
         s << a.getDescription() << endl
-          << "Start event: " << a.getStart().toString() << endl
-          << "End Event: " << a.getEnd().toString() << endl << endl;
+          << "START EVENT: " << a.getStart().toString() << endl
+          << "END EVENT: " << a.getEnd().toString() << endl << endl;
     }
     return s.str();
 }
