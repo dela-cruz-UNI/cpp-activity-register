@@ -14,6 +14,7 @@ class Activity {
         Activity(string description, Time &start, Time &end):description(description), start(start), end(end){};
 
         bool operator==(const Activity& right) const;
+        string toString();
 
         //get and set method
         string getDescription() const;

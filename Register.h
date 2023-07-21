@@ -5,20 +5,20 @@
 #ifndef LAB_PROGRAMMAZIONE_REGISTER_H
 #define LAB_PROGRAMMAZIONE_REGISTER_H
 
-#include <iostream>
-#include <vector>
 #include "Activity.h"
-
+#include "Day.h"
+#include <iostream>
+#include <map>
+#include <string>
 
 class Register {
 public:
-    void addActivity(const Activity &activity);
-    void addActivity(const string &description, const Time &start, const Time &end);
-    string toString();
-    void eraseActivity(const Activity &activity);
+    Register(){};
+    void attachActivity(const std::string day,Activity &new_activity);
+    void removeActivity(const std::string day, Activity &deleted);
 
 public:
-    vector<Activity> activityRegister;
+    std::map<std::string,Day> days;
 };
 
 #endif //LAB_PROGRAMMAZIONE_REGISTER_H

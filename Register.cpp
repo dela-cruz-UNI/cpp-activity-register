@@ -5,21 +5,7 @@
 #include <iostream>
 #include <sstream>
 
-
-void Register::addActivity(const Activity &activity) {
-    activityRegister.push_back(activity);
-}
-
-//void Register::
-
-void Register::eraseActivity(const Activity &activity) {
-    for (int i = 0; i < activityRegister.size(); i++) {
-        if (activityRegister[i] == activity) {
-            activityRegister.erase(activityRegister.begin() + i);
-        }
-    }
-}
-
+/*
 string Register::toString() {
     std::stringstream s;
     for (Activity a : activityRegister) {
@@ -29,4 +15,12 @@ string Register::toString() {
     }
     return s.str();
 }
+*/
 
+void Register::attachActivity(const std::string key,Activity &new_activity){
+    this->days[key].addActivity(new_activity);
+}
+
+void Register::removeActivity(string day, Activity &deleted) {
+    this->days[day].removeActivity(deleted);
+}

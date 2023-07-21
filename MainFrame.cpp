@@ -3,7 +3,7 @@
 //
 
 #include "MainFrame.h"
-#include "Dialog.h"
+#include "DialogAddActivity.h"
 
 MainFrame::MainFrame(const wxString &title) : wxFrame(nullptr, wxID_ANY, title){
     wxPanel* panel = new wxPanel(this, wxID_ANY);
@@ -20,6 +20,6 @@ void MainFrame::setLabel(const wxString &text) {
 }
 
 void MainFrame::OnButtonClicked(wxCommandEvent &event) {
-    Dialog* dialog = new Dialog("Add Activity", this);
+    DialogAddActivity* dialog = new DialogAddActivity("Add Activity", this);
     dialog->Show(true);
 }

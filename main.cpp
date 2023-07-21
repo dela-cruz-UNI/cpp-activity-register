@@ -30,7 +30,7 @@ bool App::OnInit() {
     r.addActivity(a1);
     r.addActivity(a2);
 
-    //frame->setLabel(r.toString());
+    frame->setLabel(r.toString());
 
     return true;
 
