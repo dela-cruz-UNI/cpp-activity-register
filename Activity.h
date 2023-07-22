@@ -7,11 +7,16 @@
 
 using namespace std;
 
+struct Time {
+    int hour;
+    int minute;
+
+}
+
 //class Activity
 class Activity {
     public:
-
-        Activity(string description, Time &start, Time &end):description(description), start(start), end(end){};
+        Activity(string title, string description/*, Time &start, Time &end*/):title(title), description(description)/*, start(start), end(end)*/{};
 
         bool operator==(const Activity& right) const;
         string toString();
@@ -19,15 +24,17 @@ class Activity {
         //get and set method
         string getDescription() const;
         void setDescription(const string& newDesc);
+        /*
         Time getStart() const;
         void setStart(const Time &newStart);
         Time getEnd() const;
         void setEnd(const Time &newEnd);
-
+        */
     private:
+        string title;
         string description;
-        Time start; //when the activity start
-        Time end; //when the activity end
+        struct Time start;
+        struct Time end;
 
 };
 

@@ -12,12 +12,14 @@ using namespace std;
 
 class Day {
 public:
-    Day(){}; //default constructor
+    Day(){} //default constructor
+    void setDay(string new_day){day = new_day;};
     void addActivity(Activity &new_activity);
     void removeActivity(Activity &deleted);
     std::string toString();
 
 private:
+    string day;
     vector<Activity> activities;
 };
 

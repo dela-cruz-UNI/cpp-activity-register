@@ -17,6 +17,11 @@ string Register::toString() {
 }
 */
 
+void Register::addDay(const std::string day) {
+    this->days[day] = Day();
+    this->days[day].setDay(day);
+}
+
 void Register::attachActivity(const std::string key,Activity &new_activity){
     this->days[key].addActivity(new_activity);
 }
@@ -24,3 +29,6 @@ void Register::attachActivity(const std::string key,Activity &new_activity){
 void Register::removeActivity(string day, Activity &deleted) {
     this->days[day].removeActivity(deleted);
 }
+
+
+
